@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from cProfile import label
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -35,4 +36,14 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    ax.plot(x,y,c='magenta', label ='Cuadratica')
+    ax.set_facecolor('lightgray')
+    ax.set_title('Funcion cuadratica')
+    ax.legend()
+    ax.grid()
+    plt.show()
+    
     print("terminamos")

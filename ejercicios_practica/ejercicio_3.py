@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from cProfile import label
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -34,4 +35,9 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure ()
+    ax = fig.add_subplot(1,2,1)
+    ax.scatter(x,y,c='navy',label='Funcion Tangente')
+    ax.legend()
+    plt.show()
     print("terminamos")
